@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'screens/home_dashboard.dart';
 import 'screens/trusted_contacts.dart';
 import 'screens/settings.dart';
@@ -14,18 +15,18 @@ class RakshaApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Raksha',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: "Raleway",
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple,
+          seedColor: const Color(0xFF1E293B), // Deep Slate/Blue base
+          primary: const Color(0xFF3B82F6), // Trustworthy Blue
+          secondary: const Color(0xFF10B981), // Reassuring Green
+          error: const Color(0xFFEF4444), // Emergency Crimson Red
           brightness: Brightness.dark,
-        ).copyWith(
-          background: const Color(0xFF121212),
-          surface: const Color(0xFF1E1E1E),
-          primary: const Color(0xFFDC2626), // Crimson red
-          secondary: const Color(0xFFFB923C), // Safety orange
         ),
-        scaffoldBackgroundColor: const Color(0xFF121212),
+        scaffoldBackgroundColor: Color(0xFF0F172A),
       ),
       darkTheme: ThemeData(
         useMaterial3: true,
@@ -70,6 +71,36 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Rakshak"),
+        centerTitle: true,
+        elevation: 0,
+        leading: GestureDetector(
+          onTap: () {},
+          child: Container(
+            decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 184, 248, 111),
+                borderRadius: BorderRadius.circular(10)),
+            margin: EdgeInsets.all(10),
+            alignment: Alignment.center,
+            child: SvgPicture.asset(
+              'assets/icons/drawer2.svg',
+            ),
+          ),
+        ),
+        actions: [
+          Container(
+            decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 184, 248, 111),
+                borderRadius: BorderRadius.circular(10)),
+            margin: EdgeInsets.all(10),
+            alignment: Alignment.center,
+            child: SvgPicture.asset(
+              'assets/icons/drawer2.svg',
+            ),
+          ),
+        ],
+      ),
       body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _selectedIndex,
@@ -107,3 +138,4 @@ class _HomeScreenState extends State<HomeScreen> {
     // TODO: Implement add contact functionality
   }
 }
+//color scheame soft green(#98FB98), clean blue (#0099FF )
