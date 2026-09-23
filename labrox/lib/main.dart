@@ -18,7 +18,7 @@ class RakshaApp extends StatelessWidget {
       title: 'Raksha',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: GoogleFonts("googl"),
+        fontFamily: google_fonts.bebasNeue,
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color(0xFF1E293B), // Deep Slate/Blue base
