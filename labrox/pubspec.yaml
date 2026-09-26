@@ -24,4 +24,4 @@ flutter:
   assets:
     - assets/icons/drawer.svg
     - assets/icons/drawer2.svg
-    - google_fonts/BebasNeue
+    - google_fonts/BebasNeue.ttf
