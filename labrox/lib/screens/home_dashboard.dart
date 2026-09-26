@@ -64,7 +64,6 @@ class HomeDashboard extends StatelessWidget {
 
   void _triggerEmergencySOS() {
     // TODO: Implement emergency SOS functionality
-    const helper=first()
   }
 }
 

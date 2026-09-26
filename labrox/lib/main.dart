@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'screens/home_dashboard.dart';
 import 'screens/trusted_contacts.dart';
 import 'screens/settings.dart';
@@ -18,7 +17,7 @@ class RakshaApp extends StatelessWidget {
       title: 'Raksha',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: google_fonts.bebasNeue,
+        fontFamily: 'BebasNeue',
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color(0xFF1E293B), // Deep Slate/Blue base
